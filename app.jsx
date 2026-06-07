@@ -1,7 +1,7 @@
 const { useEffect, useMemo, useRef, useState } = React;
 
 const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-const DEFAULT_MODEL = "google/gemma-3-27b-it:free";
+const DEFAULT_MODEL = "meta-llama/llama-3.3-70b-instruct:free";
 
 const quickQueries = [
   "2BHK in Sector 50 Gurgaon under 80 lakhs, good sunlight, near a school",
@@ -1026,9 +1026,11 @@ function App() {
               <label>
                 Free model
                 <select value={model} onChange={(event) => setModel(event.target.value)}>
-                  <option value="google/gemma-3-27b-it:free">google/gemma-3-27b-it:free</option>
+                  <option value="meta-llama/llama-3.3-70b-instruct:free">meta-llama/llama-3.3-70b-instruct:free</option>
+                  <option value="meta-llama/llama-3.2-3b-instruct:free">meta-llama/llama-3.2-3b-instruct:free</option>
                   <option value="mistralai/mistral-7b-instruct:free">mistralai/mistral-7b-instruct:free</option>
-                  <option value="meta-llama/llama-3-8b-instruct:free">meta-llama/llama-3-8b-instruct:free</option>
+                  <option value="google/gemma-4-26b-it:free">google/gemma-4-26b-it:free</option>
+                  <option value="qwen/qwen3-next-80b-a3b-instruct:free">qwen/qwen3-next-80b-a3b-instruct:free</option>
                 </select>
               </label>
             </div>
